@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="yoklamaVsty.KisiselGrafik1"
+             Title="KisiselGrafik1" BackgroundImageSource="wallpaper.jpg">
+    <ContentPage.Content>
+        <Grid>
+            <Frame BackgroundColor="#243447" 
+    CornerRadius="15"
+    Padding="25"
+    HasShadow="True"
+     HorizontalOptions="Center"
+     VerticalOptions="Center"
+      WidthRequest="320"
+           x:Name="frm1">
+                <ScrollView Orientation="Vertical" MaximumHeightRequest="600" >
+                    <StackLayout>
+
+                        <Frame BackgroundColor="Transparent" WidthRequest="250" BorderColor="#FFAA33" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0" Padding="0,5,0,5">
+                            <Label x:Name="lblKisiselBaslik" FontAttributes="Bold"  FontFamily="Arial" HorizontalOptions="Center" HorizontalTextAlignment="Center" BackgroundColor="Transparent"></Label>
+                        </Frame>
+                        <Label Text="GENEL KATILIM" HorizontalTextAlignment="Center" Margin="0,20,0,0"></Label>
+                        <ProgressBar HeightRequest="20" ProgressColor="Aqua" x:Name="barGenelProgress" ></ProgressBar>
+                        <Label x:Name="lblGenelBar" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
+
+                        <ScrollView Margin="0,20,0,0" Orientation="Both" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" MaximumHeightRequest="300">
+                            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Spacing="10" >
+
+                                <ListView x:Name="OgrenciListView"
+ItemTapped="OgrenciListView_ItemTapped">
+
+                                    <ListView.ItemTemplate >
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <Frame BorderColor="#777" Padding="0,0,0,0" BackgroundColor="Transparent" CornerRadius="0">
+                                                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" VerticalOptions="Center" Padding="10">
+                                                        <Label Text="{Binding Tarih}" FontSize="15" VerticalOptions="Center" Margin="5,0,0,0"/>
+                                                        <Label Text="{Binding zaman}" FontSize="15" VerticalOptions="Center" Margin="5,0,0,0"/>
+                                                        <Label Text="{Binding Ad}" FontSize="15" VerticalOptions="Center" Margin="5,0,0,0" />
+                                                        <Label Text="{Binding Soyad}" FontSize="15" VerticalOptions="Center" Margin="5,0,0,0"/>
+                                                        <Label Text="{Binding Durum}" FontSize="15" VerticalOptions="Center" Margin="5,0,0,0"/>
+
+                                                    </StackLayout>
+                                                </Frame>
+
+
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+
+                                </ListView>
+
+
+                            </StackLayout>
+                        </ScrollView>
+
+                        <Frame Margin="0,20,0,0" BackgroundColor="Transparent" BorderColor="#FFAA33" Padding="0,0,0,0">
+                            <Button BackgroundColor="Transparent" 
+                         Margin="0,0,0,0" 
+                            Padding="0,0,0,0" 
+                            TextColor="#FFAA33" 
+                         Clicked="btnGeri_Clicked"
+                            Text="GERİ">
+
+                            </Button>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

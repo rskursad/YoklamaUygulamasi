@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="yoklamaVsty.OgrenciSil"
+             Title="OgrenciSil" BackgroundImageSource="wallpaper.jpg">
+    <ContentPage.Content>
+        <Grid VerticalOptions="CenterAndExpand" Padding="20">
+
+            <!-- Form Kutusu -->
+            <Frame BackgroundColor="#243447" 
+CornerRadius="15"
+   Padding="25"
+   HasShadow="True"
+   HorizontalOptions="Center"
+   VerticalOptions="Center"
+   WidthRequest="320">
+
+                <StackLayout Spacing="20" HorizontalOptions="FillAndExpand">
+
+
+                    <Frame BackgroundColor="Transparent" WidthRequest="250" BorderColor="#FFAA33" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0" Padding="0,10,0,10">
+                        <Label Text="ÖĞRENCİ SİL" FontAttributes="Bold"  FontFamily="Arial" HorizontalOptions="Center" HorizontalTextAlignment="Center" BackgroundColor="Transparent"></Label>
+                    </Frame>
+                    <HorizontalStackLayout Margin="0,0,0,0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                        <SearchBar TextChanged="searchBarText_Changed" WidthRequest="250"  HorizontalOptions="CenterAndExpand" Placeholder="Öğrenci Ara"></SearchBar>
+                    </HorizontalStackLayout>
+                    <ScrollView Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Spacing="10" Margin="0,20,0,0">
+
+                            <ListView x:Name="OgrenciListView"
+ItemTapped="OgrenciListView_ItemTapped">
+
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <Frame Padding="0,0,0,0" BackgroundColor="Transparent" CornerRadius="0" BorderColor="White">
+                                                <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="10">
+
+                                                    <Label Text="{Binding Ad}" FontSize="15" VerticalOptions="Center" Margin="5,0,5,0" />
+                                                    <Label Text="{Binding Soyad}" FontSize="15" VerticalOptions="Center" />
+                                                    <Button Text="Sil" FontFamily="Arial" HeightRequest="40" FontAttributes="Bold" HorizontalOptions="EndAndExpand"
+    BackgroundColor="#FFAA33" 
+           TextColor="Black"
+    CommandParameter="{Binding Id}"
+Clicked="SilButton_Clicked" />
+
+                                                </StackLayout>
+                                            </Frame>
+
+
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+
+                            </ListView>
+
+
+                        </StackLayout>
+                    </ScrollView>
+                    <Frame BackgroundColor="Transparent" BorderColor="#FFAA33" Padding="0,0,0,0">
+                        <Button BackgroundColor="Transparent" 
+                        Margin="0,0,0,0" 
+                        Padding="0,0,0,0" 
+                        TextColor="#FFAA33" 
+                        Clicked="btnGeri_Clicked"
+                        Text="GERİ">
+
+                        </Button>
+                    </Frame>
+                </StackLayout>
+
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

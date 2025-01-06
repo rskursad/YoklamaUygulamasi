@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="yoklamaVsty.MainMenu"
+             Title="MainMenu"         BackgroundImageSource="wallpaper.jpg">
+    <ContentPage.Content>
+        <Grid>
+            <Frame BackgroundColor="#243447" 
+    CornerRadius="15"
+    Padding="25"
+           
+    HasShadow="True"
+     HorizontalOptions="Center"
+     VerticalOptions="Center"
+      WidthRequest="320"
+           x:Name="frm1">
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <Frame BackgroundColor="Transparent" WidthRequest="250" BorderColor="#FFAA33" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0" Padding="0,10,0,10">
+                        <Label Text="ÖĞRENCİ YOKLAMA SİSTEMİ" FontAttributes="Bold"  FontFamily="Arial" HorizontalOptions="Center" HorizontalTextAlignment="Center" BackgroundColor="Transparent"></Label>
+                    </Frame>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Spacing="15" Margin="0,50,0,0">
+                        <Frame BorderColor="#FFAA33" Padding="0,0,0,0">
+                            <Button Text="YOKLAMA"  BackgroundColor="#FFAA33" Clicked="Button_Clicked"  Margin="0,0,0,0"  FontAttributes="Bold"  FontFamily="Arial" TextColor="Black"  ></Button>
+                        </Frame>
+                        <Frame BorderColor="#FFAA33" Padding="0,0,0,0">
+                            <Button Text="ÖĞRENCİ GÖRÜNTÜLE" Clicked="Button_Clicked" BackgroundColor="#FFAA33" Margin="0,0,0,0" FontAttributes="Bold" FontFamily="Arial"  TextColor="Black"></Button>
+                        </Frame>
+                        <Frame BorderColor="#FFAA33" Padding="0,0,0,0">
+                            <Button Text="ÖĞRENCİ EKLE" Clicked="Button_Clicked" BackgroundColor="#FFAA33" Margin="0,0,0,0" FontFamily="Arial" FontAttributes="Bold"  TextColor="Black"></Button>
+                        </Frame>
+                        <Frame BorderColor="#FFAA33" Padding="0,0,0,0">
+                            <Button Text="ÖĞRENCİ SİL" Clicked="Button_Clicked"  BackgroundColor="#FFAA33" Margin="0,0,0,0" FontFamily="Arial"  FontAttributes="Bold"  TextColor="Black"></Button>
+                        </Frame>
+
+                        <Frame BorderColor="#FFAA33" Padding="0,0,0,0" IsEnabled="True">
+                            <Button Text="GRAFİKLER" Clicked="Button_Clicked" BackgroundColor="#FFAA33" Margin="0,0,0,0" FontAttributes="Bold" FontFamily="Arial"  TextColor="Black"></Button>
+                        </Frame>
+                        <Frame BorderColor="#FFAA33" Padding="0,0,0,0" >
+                            <Button Text="EXCEL DOSYASI" Clicked="Button_Clicked" BackgroundColor="#FFAA33" Margin="0,0,0,0" FontAttributes="Bold" FontFamily="Arial"  TextColor="Black"></Button>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
